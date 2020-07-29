@@ -11,23 +11,18 @@ class User
         string userName;
         int userAge;
     public:
-        User();
-        ~User();
+        User(); // Default Constructor
+        User(string name);
+        ~User(); // Destructor
         
+        // Get usersname
         string getUserName() {
             return userName;
         }
 
-        int getUserAge() {
-            return userAge;
-        }
-
+        // Set username
         void setUserName(string uName) {
             userName = uName;
-        }
-
-        void setUserAge(int uAge) {
-            userAge = uAge;
         }
 };
 

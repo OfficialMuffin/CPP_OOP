@@ -8,6 +8,12 @@ User::User()
     cout << "User Created!" << endl;
 }
 
+User::User(string name)
+{
+    userName = name;
+    cout << "New user " << userName << " Created!" << endl;
+}
+
 User::~User()
 {
     cout << "User Destroyed!" << endl;

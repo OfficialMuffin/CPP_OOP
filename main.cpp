@@ -5,16 +5,15 @@ using namespace std;
 
 int main() {
 
-    User u;
-
     string name;
     char choice;
 
     cout << "Hai! Please type your name on the keyboard with your pawbs, fren! Then press enter." << endl;
     cin >> name;
-    u.setUserName(name);
 
-    cout << "Your username is: " << u.getUserName() << ". Dat your name? (Y/n)" << endl;
+    User user(name);
+
+    cout << "Your username is: " << user.getUserName() << ". Dat your name? (Y/n)" << endl;
     cin >> choice;
 
     if(choice == 'Y')
@@ -22,12 +21,29 @@ int main() {
         cout << "That great fren! I like your name!" << endl;
         return 0;
     }
-    else
+
+    else if (choice == 'n')
     {
         cout << "Try again fren! Doin me a heccin excite :3" << endl;
     }
+    
+    else
+    {
+        
+        cout << "Do you want to quit? (Y/n)" << endl;
+        cin >> choice;
+
+        if (choice == 'Y')
+        {
+            return 0;
+        }
+        else
+        {
+            // Re-run the program
+        }
+        
+    }
 
     return 0;
-
 
 };
